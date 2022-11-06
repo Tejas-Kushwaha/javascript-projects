@@ -1,0 +1,93 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    background: url('back.png') no-repeat;
+    background-size: cover;
+    color: #fff;
+}
+.container{
+    background: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3));
+    padding: 20px 40px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 30px rgb(124, 124, 124);
+}
+
+
+.container h1{
+    text-align: center;
+    margin: 30px 0;
+}
+.container a{
+    text-decoration: none;
+    color: steelblue;
+}
+.btn{
+    cursor: pointer;
+    display: inline-block;
+    width: 100%;
+    background-color: steelblue;
+    color: #fff;
+    border: 0;
+    border-radius: 5px;
+    padding: 15px;
+    font-size: 18px;
+}
+.btn:focus{
+    outline: 0;
+}
+.btn:active{
+    transform: scale(0.98);
+}
+
+
+.form-control{
+    position: relative;
+    width: 300px;
+    margin: 20px 0 40px;
+}
+.form-control input{
+    background: transparent;
+    border: 0;
+    border-bottom: 2px solid #fff;
+    display: block;
+    width: 100%;
+    padding: 15px 0;
+    font-size: 18px;
+    color: #fff;
+    
+}
+.form-control input:focus,
+.form-control input:valid{
+    outline: 0;
+    border-bottom-color: steelblue;
+}
+
+.text{
+    margin: 20px 0;
+}
+
+.form-control label{
+    position: absolute;
+    top: 15px;
+    left: 0;
+}
+.form-control label spam{
+    display: inline-block;
+    font-size: 18px;
+    min-width: 5px;
+    transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.form-control input:focus + label spam,
+.form-control input:valid + label spam{
+    color: steelblue;
+    transform: translateY(-30px);
+}
